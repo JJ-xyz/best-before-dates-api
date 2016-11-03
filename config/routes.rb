@@ -10,10 +10,8 @@ Rails.application.routes.draw do
 
   # -- BEGIN --suggested
 
-  resources :users, only: [:create, :show, :update] do
-    resources :households, only: [:index, :create, :show, :update, :destroy] do
-      resources :items, only: [:index, :create, :show, :update, :destroy] do
-      end
+  resources :households, only: [:index, :create, :show, :update, :destroy] do
+    resources :items, only: [:index, :create, :show, :update, :destroy] do
     end
   end
 

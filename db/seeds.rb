@@ -10,7 +10,7 @@ Household.destroy_all
 Item.destroy_all
 
 10.times do |i|
-  Item.create(name: Faker::University.name)
-  User.create(username: Faker::Name.name, password: Faker::Beer.malts, email: "F")
-  Household.create(name: Faker::Name.name, num_people: Faker::Number.between(1, 10), user_id: i+1, item_id: i+1 )
+  Household.create(name: Faker::Name.name, num_people: Faker::Number.between(1, 10) )
+  Item.create(name: Faker::University.name, household_id: i+1)
+  User.create(username: Faker::Name.name, password: Faker::Beer.malts, email: "F", household_id: i+1)
 end
