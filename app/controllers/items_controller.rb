@@ -5,13 +5,13 @@ def index
     render json: items
   end
 
-  #GET /api/items/1
+  #GET /items/1
   def show
   item = Item.find(params[:id])
   render json: item
   end
 
-    # POST /api/items
+    # POST /items
   def create
     item = Item.new(item_params)
     puts(item_params)
@@ -23,7 +23,7 @@ def index
     end
   end
 
-  # PATCH/PUT /api/items/1
+  # PATCH/PUT /items/1
   def update
     item = Item.find(params[:id])
     if item.update(item_params)
