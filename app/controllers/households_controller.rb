@@ -33,18 +33,15 @@ class HouseholdsController < ApplicationController
   end
 
   # def destroy
-
+  #
   #  household = Household.find(params[:id])
-
+  #
   #   if household.destroy
-  #     render json: {status: 200, household: household}
+  #     render json: {status: 204, household: household}
   #   else
   #     render json: {status: 422, household: household, error: error}
   #   end
-
-
-  #   render json: {status: 204}
-
+  #
   # end
 
   private
