@@ -32,21 +32,27 @@ class HouseholdsController < ApplicationController
     render json: {status: 200, household: household}
   end
 
-  def destroy
-    household = Household.destroy(params[:id])
+  # def destroy
 
-    render json: {status: 204}
+  #  household = Household.find(params[:id])
 
-  end
+  #   if household.destroy
+  #     render json: {status: 200, household: household}
+  #   else
+  #     render json: {status: 422, household: household, error: error}
+  #   end
+
+
+  #   render json: {status: 204}
+
+  # end
 
   private
 
   def household_params
     params.required(:household).permit(
       :name,
-      :num_people,
-      :user_id,
-      :item_id
+      :num_people
     )
   end
 

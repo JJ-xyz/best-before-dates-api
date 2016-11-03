@@ -44,6 +44,6 @@ def index
   private
     # Only allow a trusted parameter "white list" through.
     def item_params
-      params.require(:item).permit(:name, :exp_date, :date_purchased, :description, :where_to_buy, :rating, :upc, :in_use)
+      params.require(:item).permit(:name, :exp_date, :date_purchased, :description, :where_to_buy, :rating, :upc, :in_use, :household_id)
     end
 end
