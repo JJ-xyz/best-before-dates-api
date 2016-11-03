@@ -21,5 +21,5 @@ class ApplicationController < ActionController::API
   rescue
     render json: {status: 401, message: 'invalid or expired token'}
   end
-
+  
 end

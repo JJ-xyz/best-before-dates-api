@@ -1,4 +1,5 @@
 class HouseholdsController < ApplicationController
+  # -- ask first --before_action :authenticate
   def index
     household = Household.all
 

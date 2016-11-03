@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+    # -- ask first --before_action :authenticate
 #GET /items
 def index
     items = Item.all
